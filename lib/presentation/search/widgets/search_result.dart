@@ -5,7 +5,7 @@ import 'package:netflix_clone/core/colors/constants.dart';
 import 'package:netflix_clone/presentation/search/widgets/title.dart';
 
 const imageUrl =
-    "https://www.themoviedb.org/t/p/w220_and_h330_face/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg";
+    "https://www.themoviedb.org/t/p/original/3zXceNTtyj5FLjwQXuPvLYK5YYL.jpg";
 
 class SearchResultWidget extends StatelessWidget {
   const SearchResultWidget({super.key});

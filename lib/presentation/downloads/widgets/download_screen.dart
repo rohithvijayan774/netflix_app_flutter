@@ -37,9 +37,9 @@ class DownloadScreen extends StatelessWidget {
 class Section2 extends StatelessWidget {
   Section2({super.key});
   final List imageList = [
-    "https://www.themoviedb.org/t/p/w220_and_h330_face/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
-    "https://www.themoviedb.org/t/p/w220_and_h330_face/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg",
-    "https://www.themoviedb.org/t/p/w220_and_h330_face/kGgB1AiOogVfAmMokukr9kIJZCJ.jpg",
+    "https://www.themoviedb.org/t/p/original/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+    "https://www.themoviedb.org/t/p/original/3zXceNTtyj5FLjwQXuPvLYK5YYL.jpg",
+    "https://www.themoviedb.org/t/p/original/kGgB1AiOogVfAmMokukr9kIJZCJ.jpg",
   ];
 
   @override

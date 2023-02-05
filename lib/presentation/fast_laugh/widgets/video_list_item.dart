@@ -49,7 +49,7 @@ class VideoListItem extends StatelessWidget {
                         radius: 25,
                         backgroundColor: Colors.black.withOpacity(0.1),
                         backgroundImage: const NetworkImage(
-                          "https://www.themoviedb.org/t/p/w220_and_h330_face/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg",
+                          "https://www.themoviedb.org/t/p/original/3zXceNTtyj5FLjwQXuPvLYK5YYL.jpg",
                         ),
                       ),
                     ),
