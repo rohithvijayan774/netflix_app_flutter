@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
 import 'package:netflix_clone/core/colors/constants.dart';
 import 'package:netflix_clone/presentation/home/widgets/custom_homePage_button.dart';
+import 'package:netflix_clone/presentation/widgets/video_widget.dart';
 
 class ComingSoonWidget extends StatelessWidget {
   const ComingSoonWidget({
@@ -41,36 +42,8 @@ class ComingSoonWidget extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Stack(
-                children: [
-                  SizedBox(
-                    width: double.infinity,
-                    height: 180,
-                    child: Image.network(
-                      newAndHotTempImage,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  Positioned(
-                    bottom: 10,
-                    right: 10,
-                    child: CircleAvatar(
-                      backgroundColor: Colors.black.withOpacity(0.3),
-                      radius: 15,
-                      child: IconButton(
-                        iconSize: 15,
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.volume_off_outlined,
-                          color: kWhiteColor,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              const VideoWidget(),
               Row(
-                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
                     'WINNIE THE POOH',
@@ -80,7 +53,7 @@ class ComingSoonWidget extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Row(
                     children: const [
                       CustomHomePageButton(
@@ -115,10 +88,10 @@ class ComingSoonWidget extends StatelessWidget {
                 ),
               ),
               kHeight,
-              Text(
+              const Text(
                 'Christopher Robin is headed off to college and he has abandoned his old friends, Pooh and Piglet, which then leads to the duo embracing their inner monsters.',
                 style: TextStyle(fontSize: 15, color: Colors.grey),
-              )
+              ),
             ],
           ),
         ),
