@@ -20,3 +20,5 @@ const newAndHotTempImage =
 
 const imageVideoWidgetTwo =
     'https://www.themoviedb.org/t/p/original/5gPQKfFJnl8d1edbkOzKONo4mnr.jpg';
+
+const imageAppendUrl = 'https://image.tmdb.org/t/p/w500';
