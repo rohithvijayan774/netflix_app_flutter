@@ -9,7 +9,6 @@ import 'package:netflix_clone/domain/search/search_service.dart';
 
 import '../../domain/downloads/core/api_end_points.dart';
 
-
 @LazySingleton(as: SearchService)
 class SearchImpl implements SearchService {
   @override
@@ -22,6 +21,7 @@ class SearchImpl implements SearchService {
           'query': movieQuery,
         },
       );
+      // log(response.data.toString());
       if (response.statusCode == 200 || response.statusCode == 201) {
         // final downloadsList = (response.data['results'] as List).map((e) {
         //   return SearchResp.fromJson(e);
@@ -32,6 +32,9 @@ class SearchImpl implements SearchService {
       } else {
         return const Left(MainFailure.serverFailure());
       }
+    } on DioError catch (e) {
+      log(e.toString());
+      return const Left(MainFailure.clientFailure());
     } catch (e) {
       log(e.toString());
       return const Left(MainFailure.clientFailure());

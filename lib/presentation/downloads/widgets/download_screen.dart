@@ -98,7 +98,7 @@ class Section2 extends StatelessWidget {
                         ),
                         DownloadImageWidget(
                           imageList:
-                              '$imageAppendUrl${state.downloads[3].posterPath}',
+                              '$imageAppendUrl${state.downloads[2].posterPath}',
                           margin: const EdgeInsets.only(left: 0),
                           size: Size(size.width * 0.4, size.width * 0.58),
                         ),
