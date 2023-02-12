@@ -4,9 +4,16 @@ import 'package:netflix_clone/presentation/home/widgets/custom_homePage_button.d
 import 'package:netflix_clone/presentation/widgets/video_widget_two.dart';
 
 class EveryonesWatchingWidget extends StatelessWidget {
+  final String posterPath;
+  final String movieName;
+  final String description;
+
   const EveryonesWatchingWidget({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+    required this.posterPath,
+    required this.movieName,
+    required this.description,
+  });
 
   @override
   Widget build(BuildContext context) {

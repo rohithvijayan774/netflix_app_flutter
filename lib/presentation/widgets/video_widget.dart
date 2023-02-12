@@ -3,8 +3,10 @@ import 'package:netflix_clone/core/colors/colors.dart';
 import 'package:netflix_clone/core/colors/constants.dart';
 
 class VideoWidget extends StatelessWidget {
+  final String url;
   const VideoWidget({
     Key? key,
+   required this.url,
   }) : super(key: key);
 
   @override
@@ -15,7 +17,7 @@ class VideoWidget extends StatelessWidget {
           width: double.infinity,
           height: 180,
           child: Image.network(
-            newAndHotTempImage,
+            url,
             fit: BoxFit.cover,
           ),
         ),

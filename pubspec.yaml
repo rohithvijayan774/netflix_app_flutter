@@ -40,9 +40,10 @@ dependencies:
   get_it: ^7.2.0
   google_fonts: null
   injectable: ^1.5.3
+  intl: ^0.18.0
   json_annotation: ^4.8.0
   json_serializable: ^6.6.1
-  share_plus: 
+  share_plus: null
   video_player: ^2.3.0
 
 dev_dependencies:

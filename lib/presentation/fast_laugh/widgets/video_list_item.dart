@@ -92,10 +92,23 @@ class VideoListItem extends StatelessWidget {
                                 likedVideosIdsNotifier.value.remove(_index);
                                 likedVideosIdsNotifier.notifyListeners();
                               },
-                              child: const VideoActionsWidget(
-                                icon: Icons.favorite,
-                                title: 'Liked',
+                              child: Column(
+                                children: const [
+                                  Icon(
+                                    Icons.favorite,
+                                    color: Colors.red,
+                                    size: 35,
+                                  ),
+                                  Text(
+                                    'Liked',
+                                    style: TextStyle(fontSize: 15),
+                                  )
+                                ],
                               ),
+                              // child: const VideoActionsWidget(
+                              //   icon: Icons.favorite,
+                              //   title: 'Liked',
+                              // ),
                             );
                           }
 

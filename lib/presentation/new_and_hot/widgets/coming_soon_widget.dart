@@ -5,9 +5,22 @@ import 'package:netflix_clone/presentation/home/widgets/custom_homePage_button.d
 import 'package:netflix_clone/presentation/widgets/video_widget.dart';
 
 class ComingSoonWidget extends StatelessWidget {
+  final String id;
+  final String month;
+  final String day;
+  final String posterPath;
+  final String movieName;
+  final String description;
+
   const ComingSoonWidget({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+    required this.id,
+    required this.month,
+    required this.day,
+    required this.posterPath,
+    required this.movieName,
+    required this.description,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,16 +32,16 @@ class ComingSoonWidget extends StatelessWidget {
           height: 400,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: const [
+            children: [
               Text(
-                'FEB',
-                style: TextStyle(
+                month,
+                style: const TextStyle(
                   fontSize: 20,
                 ),
               ),
               Text(
-                '11',
-                style: TextStyle(
+                day,
+                style: const TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                 ),
@@ -42,18 +55,23 @@ class ComingSoonWidget extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const VideoWidget(),
+              VideoWidget(
+                url: posterPath,
+              ),
               Row(
                 children: [
-                  const Text(
-                    'WINNIE THE POOH',
-                    style: TextStyle(
-                      letterSpacing: -1,
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
+                  Expanded(
+                    child: Text(
+                      movieName,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        letterSpacing: -1,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                  const Spacer(),
                   Row(
                     children: const [
                       CustomHomePageButton(
@@ -75,22 +93,26 @@ class ComingSoonWidget extends StatelessWidget {
                 ],
               ),
               kHeight,
-              const Text(
-                'Coming on Friday',
-                style: TextStyle(fontSize: 15),
+              Text(
+                'Coming on $day $month',
+                style: const TextStyle(fontSize: 15),
               ),
               kHeight,
-              const Text(
-                'Winnie The Pooh',
-                style: TextStyle(
+              Text(
+                movieName,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               kHeight,
-              const Text(
-                'Christopher Robin is headed off to college and he has abandoned his old friends, Pooh and Piglet, which then leads to the duo embracing their inner monsters.',
-                style: TextStyle(fontSize: 15, color: Colors.grey),
+              Text(
+                description,
+                maxLines: 4,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(fontSize: 15, color: Colors.grey),
               ),
             ],
           ),
